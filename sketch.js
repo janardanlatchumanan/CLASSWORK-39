@@ -1,4 +1,7 @@
 var canvas, backgroundImage;
+var car1Img,car2Img,car3Img,car4Img;
+var trackImg;
+
 
 var gameState = 0;
 var playerCount;
@@ -9,6 +12,17 @@ var database;
 var form, player, game;
 
 var cars, car1, car2, car3, car4;
+
+function preload(){
+
+car1Img = loadImage("../images/car1.png");
+car2Img = loadImage("../images/car2.png");
+car3Img = loadImage("../images/car3.png");
+car4Img = loadImage("../images/car4.png");
+track = loadImage("../images/track.png");
+ground = loadImage("../images/ground.png");
+
+}
 
 
 function setup(){
@@ -28,4 +42,8 @@ function draw(){
     clear();
     game.play();
   }
+  if(gameState == 2){
+game.end();
+}
+
 }
